@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-fx="on">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOURCES // OVERSIGHT TERMINAL</title>
+  <meta name="description" content="Every data source and news source used by OVERSIGHT, its known lean, and how figures are collected." />
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">OVERSIGHT<span class="sep"> // </span><span class="sub">TERMINAL</span></div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Dashboard</a>
+        <a href="news.html">News</a>
+        <a href="sources.html" class="active">Sources</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="fx-toggle" aria-pressed="false" title="Toggle CRT effects / high contrast">[ EFFECTS: ON ]</button>
+    </div>
+  </header>
+
+  <main class="wrap prose">
+    <div class="section-head"><h2 class="prompt">SOURCES &amp; METHODOLOGY</h2></div>
+
+    <div class="callout">
+      <b>OUR STANCE.</b> We aim for <b>transparency, not the illusion of neutrality</b>. "Government overreach" is itself a framing, and every outlet and think-tank carries perspective. So rather than claim to be unbiased, we show you exactly where each number and headline comes from, date it, and link out. Judge the sources yourself.
+    </div>
+
+    <h2>Spending data — official government feeds</h2>
+    <p>The numbers on the dashboard come from free, authoritative U.S. government APIs. They are machine-fetched on a schedule and stamped with a fetch date. We do not hand-edit figures.</p>
+    <table class="src-table">
+      <tr><th>Source</th><th>What we pull</th><th>Key?</th><th>Lean</th></tr>
+      <tr><td><a href="https://fiscaldata.treasury.gov/" target="_blank" rel="noopener">Treasury Fiscal Data</a></td><td>Outlays, deficit, national debt</td><td>None</td><td>Official / non-partisan</td></tr>
+      <tr><td><a href="https://www.usaspending.gov/" target="_blank" rel="noopener">USAspending.gov</a></td><td>Federal awards &amp; agency spending</td><td>None</td><td>Official / non-partisan</td></tr>
+      <tr><td><a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED (St. Louis Fed)</a></td><td>Macro &amp; budget time series</td><td>Free key</td><td>Official / non-partisan</td></tr>
+    </table>
+
+    <h2>Context &amp; analysis — think tanks</h2>
+    <p>Interpretation ("what does this number mean?") is drawn from research institutions and <b>clearly separated from the raw data</b>. These organizations do analysis, not neutral reporting, and generally sit center to center-left. We cite them per metric.</p>
+    <table class="src-table">
+      <tr><th>Source</th><th>Role</th><th>Lean (best-effort)</th></tr>
+      <tr><td><a href="https://budgetmodel.wharton.upenn.edu/" target="_blank" rel="noopener">Penn Wharton Budget Model</a></td><td>Budget/policy scoring</td><td>Academic / center</td></tr>
+      <tr><td><a href="https://www.hamiltonproject.org/" target="_blank" rel="noopener">The Hamilton Project</a></td><td>Economic policy analysis</td><td>Center-left</td></tr>
+      <tr><td><a href="https://www.brookings.edu/" target="_blank" rel="noopener">Brookings Institution</a></td><td>Broad policy research</td><td>Center-left</td></tr>
+    </table>
+
+    <h2>News — headlines only, curated by approval</h2>
+    <p>The news feed shows a headline, a short summary, and a link out — never a full article. A scheduled job surfaces candidate stories from the feeds below; a human approves each before it publishes. Lean labels are our best-effort assessment shown for transparency.</p>
+    <table class="src-table">
+      <tr><th>Source</th><th>Type</th><th>Lean (best-effort)</th></tr>
+      <tr><td><a href="https://apnews.com/" target="_blank" rel="noopener">AP News</a></td><td>Wire / straight news</td><td>Center</td></tr>
+      <tr><td><a href="https://www.axios.com/" target="_blank" rel="noopener">Axios</a></td><td>News</td><td>Center</td></tr>
+      <tr><td><a href="https://www.aljazeera.com/" target="_blank" rel="noopener">Al Jazeera</a></td><td>News</td><td>Center / international</td></tr>
+      <tr><td><a href="https://www.dropsitenews.com/" target="_blank" rel="noopener">Drop Site News</a></td><td>Investigative</td><td>Left</td></tr>
+    </table>
+
+    <h2>How to read this site</h2>
+    <ul>
+      <li><b>DATA</b> badge = machine-fetched from a government API.</li>
+      <li><b>COMMENTARY</b> badge = analysis/opinion, not straight reporting.</li>
+      <li>Lean colors: <span class="badge lean-left">left</span> <span class="badge lean-center">center</span> <span class="badge lean-right">right</span> — our assessment, not an endorsement.</li>
+      <li>Every figure carries a <em>fetched</em> date; check it for freshness.</li>
+    </ul>
+
+    <div class="callout"><b>CORRECTIONS.</b> Spot a mislabeled source or a stale figure? This project is open-source — corrections are welcome via the repository.</div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap"><span>OVERSIGHT TERMINAL</span><span><a href="about.html">About</a></span></div>
+  </footer>
+
+  <script src="assets/js/effects.js"></script>
+</body>
+</html>

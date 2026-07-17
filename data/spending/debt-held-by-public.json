@@ -1,0 +1,38 @@
+{
+  "id": "debt-held-by-public",
+  "title": "Debt Held by the Public",
+  "unit": "USD_billions",
+  "series": [
+    {
+      "period": "FY21",
+      "value": 22283
+    },
+    {
+      "period": "FY22",
+      "value": 24299
+    },
+    {
+      "period": "FY23",
+      "value": 26330
+    },
+    {
+      "period": "FY24",
+      "value": 28307
+    },
+    {
+      "period": "FY25",
+      "value": 30278
+    },
+    {
+      "period": "Now",
+      "value": 31818
+    }
+  ],
+  "dataSource": "Treasury Fiscal Data (Debt to the Penny)",
+  "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+  "fetchedAt": "2026-07-17",
+  "context": "The portion of the national debt owed to outside investors — individuals, funds, and foreign governments — as opposed to money the government owes itself (like the Social Security trust funds).",
+  "why": "Economists usually treat debt held by the public as the most meaningful debt measure, because it reflects actual borrowing from financial markets and drives interest costs.",
+  "contextSource": "The Hamilton Project",
+  "contextSourceUrl": "https://www.hamiltonproject.org/topic/fiscal-policy/"
+}

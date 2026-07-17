@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-fx="on">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVERSIGHT TERMINAL</title>
+  <meta name="description" content="A transparent, source-cited terminal for tracking U.S. government spending and reporting on government overreach." />
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+  <div id="boot"></div>
+
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">OVERSIGHT<span class="sep"> // </span><span class="sub">TERMINAL</span></div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="news.html">News</a>
+        <a href="sources.html">Sources</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="fx-toggle" aria-pressed="false" title="Toggle CRT effects / high contrast">[ EFFECTS: ON ]</button>
+    </div>
+  </header>
+
+  <div class="ticker"><div class="wrap" id="ticker-line"><span>// INITIALIZING FEED…</span></div></div>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1 class="glow">OVERSIGHT TERMINAL</h1>
+      <p>Authoritative U.S. federal spending figures, pulled from official government data feeds and paired with plain-language context. Numbers are machine-fetched and dated; interpretation is cited and kept separate.</p>
+      <p class="mission">// EVERY FIGURE LINKS TO ITS SOURCE — TRANSPARENCY OVER THE ILLUSION OF NEUTRALITY</p>
+    </section>
+
+    <div class="section-head">
+      <h2 class="prompt">KEY METRICS</h2>
+      <span class="tag cursor-blink">live from data/spending</span>
+    </div>
+
+    <section class="grid cols-3" id="metrics" aria-live="polite">
+      <div class="empty">// LOADING METRICS…</div>
+    </section>
+  </main>
+
+  <!-- detail modal -->
+  <div class="detail" id="detail" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Metric detail">
+    <div class="detail-backdrop"></div>
+    <div class="detail-panel">
+      <button class="detail-close" aria-label="Close detail">[ ESC / CLOSE ]</button>
+      <div class="detail-body"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>OVERSIGHT TERMINAL — built for public transparency. Not affiliated with any government agency.</span>
+      <span><a href="sources.html">Sources &amp; Methodology</a> · <a href="about.html">About</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/chart.umd.min.js"></script>
+  <script src="assets/js/effects.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script>
+    OVERSIGHT.boot([
+      "OVERSIGHT TERMINAL — UNIFIED FISCAL MONITOR",
+      "COPYRIGHT (C) PUBLIC DOMAIN DATA / OPEN SOURCE",
+      "",
+      "> MOUNTING DATA VOLUMES ......... OK",
+      "> CONNECTING TREASURY FISCAL DATA ... OK",
+      "> CONNECTING USASPENDING.GOV ....... OK",
+      "> CONNECTING FRED (ST. LOUIS FED) ... OK",
+      "> LOADING CURATED CONTEXT LAYER .... OK",
+      "",
+      "INITIALIZING OVERSIGHT TERMINAL_"
+    ]);
+  </script>
+</body>
+</html>

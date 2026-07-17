@@ -1,0 +1,88 @@
+{
+  "id": "spending-by-function",
+  "title": "Spending by Category (FY25)",
+  "unit": "USD_billions",
+  "kind": "breakdown",
+  "breakdown": [
+    {
+      "name": "Medicare",
+      "value": 1837
+    },
+    {
+      "name": "Social Security",
+      "value": 1668
+    },
+    {
+      "name": "National Defense",
+      "value": 1416
+    },
+    {
+      "name": "Net Interest",
+      "value": 1251
+    },
+    {
+      "name": "Health",
+      "value": 1145
+    },
+    {
+      "name": "Income Security",
+      "value": 759
+    },
+    {
+      "name": "General Government",
+      "value": 511
+    },
+    {
+      "name": "Veterans Benefits and Services",
+      "value": 413
+    },
+    {
+      "name": "Education, Training, Employment, and Social Services",
+      "value": 222
+    },
+    {
+      "name": "Transportation",
+      "value": 198
+    },
+    {
+      "name": "Natural Resources and Environment",
+      "value": 133
+    },
+    {
+      "name": "Administration of Justice",
+      "value": 115
+    },
+    {
+      "name": "Community and Regional Development",
+      "value": 106
+    },
+    {
+      "name": "Commerce and Housing Credit",
+      "value": 96
+    },
+    {
+      "name": "Agriculture",
+      "value": 73
+    },
+    {
+      "name": "International Affairs",
+      "value": 72
+    },
+    {
+      "name": "Energy",
+      "value": 63
+    },
+    {
+      "name": "General Science, Space, and Technology",
+      "value": 48
+    }
+  ],
+  "total": 10334,
+  "dataSource": "USAspending.gov",
+  "dataSourceUrl": "https://www.usaspending.gov/explorer/budget_function",
+  "fetchedAt": "2026-07-17",
+  "context": "How federal spending splits across major purposes — Social Security, Medicare, defense, interest, and so on — for the most recent completed fiscal year, per USAspending.gov.",
+  "why": "The category mix shows where the money actually goes. Note USAspending uses a broader, account-level basis than the Treasury outlays figure, so its total is larger and the two won't reconcile exactly — read this for the relative shares, not the grand total.",
+  "contextSource": "Brookings Institution",
+  "contextSourceUrl": "https://www.brookings.edu/topic/fiscal-policy/"
+}

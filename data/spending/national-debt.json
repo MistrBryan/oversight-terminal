@@ -1,0 +1,38 @@
+{
+  "id": "national-debt",
+  "title": "National Debt",
+  "unit": "USD_billions",
+  "series": [
+    {
+      "period": "FY21",
+      "value": 28429
+    },
+    {
+      "period": "FY22",
+      "value": 30929
+    },
+    {
+      "period": "FY23",
+      "value": 33167
+    },
+    {
+      "period": "FY24",
+      "value": 35465
+    },
+    {
+      "period": "FY25",
+      "value": 37638
+    },
+    {
+      "period": "Now",
+      "value": 39519
+    }
+  ],
+  "dataSource": "Treasury Fiscal Data (Debt to the Penny)",
+  "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+  "fetchedAt": "2026-07-17",
+  "context": "The total amount the federal government owes, accumulated from decades of deficits. Includes debt held by the public plus intragovernmental holdings.",
+  "why": "The debt is the running total of past borrowing. As it grows, so does the interest bill, which competes with every other spending priority.",
+  "contextSource": "Brookings Institution",
+  "contextSourceUrl": "https://www.brookings.edu/topic/fiscal-policy/"
+}

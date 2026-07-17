@@ -1,0 +1,34 @@
+{
+  "id": "federal-outlays",
+  "title": "Federal Outlays",
+  "unit": "USD_billions",
+  "series": [
+    {
+      "period": "FY21",
+      "value": 6818
+    },
+    {
+      "period": "FY22",
+      "value": 6272
+    },
+    {
+      "period": "FY23",
+      "value": 6134
+    },
+    {
+      "period": "FY24",
+      "value": 6752
+    },
+    {
+      "period": "FY25",
+      "value": 7010
+    }
+  ],
+  "dataSource": "Treasury Fiscal Data (MTS)",
+  "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
+  "fetchedAt": "2026-07-17",
+  "context": "Total money the federal government actually spent during the fiscal year, across every agency and program. This is the headline 'spending' number.",
+  "why": "Outlays are the broadest measure of the size of government. Compare the trend against receipts (what the government took in) to see whether spending is growing faster than revenue.",
+  "contextSource": "Penn Wharton Budget Model",
+  "contextSourceUrl": "https://budgetmodel.wharton.upenn.edu/issues/"
+}

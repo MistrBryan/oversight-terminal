@@ -1,0 +1,34 @@
+{
+  "id": "interest-on-debt",
+  "title": "Interest on the Debt",
+  "unit": "USD_billions",
+  "series": [
+    {
+      "period": "FY21",
+      "value": 562
+    },
+    {
+      "period": "FY22",
+      "value": 719
+    },
+    {
+      "period": "FY23",
+      "value": 883
+    },
+    {
+      "period": "FY24",
+      "value": 1133
+    },
+    {
+      "period": "FY25",
+      "value": 1220
+    }
+  ],
+  "dataSource": "Treasury Fiscal Data (Interest Expense)",
+  "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/interest-expense-debt-outstanding/",
+  "fetchedAt": "2026-07-17",
+  "context": "What the government pays each year to service the national debt — gross interest across all Treasury securities. This has roughly doubled in a few years as rates and debt both rose.",
+  "why": "Interest is now one of the largest single line items in the budget, rivaling defense. Every dollar of interest is a dollar not available for other priorities, and it grows automatically as debt compounds.",
+  "contextSource": "Penn Wharton Budget Model",
+  "contextSourceUrl": "https://budgetmodel.wharton.upenn.edu/issues/"
+}

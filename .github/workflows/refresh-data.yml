@@ -1,0 +1,41 @@
+name: refresh-data
+
+# Weekly refresh of spending figures from official government APIs.
+# Numbers are authoritative and non-partisan, so this commits directly
+# (no approval gate). See tools/fetch-spending.mjs.
+
+on:
+  schedule:
+    - cron: "17 9 * * 1"   # Mondays 09:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch spending data
+        env:
+          # Optional: enables FRED-backed metrics in fetch-spending.mjs.
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: node tools/fetch-spending.mjs
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "oversight-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/spending)" ]; then
+            git add data/spending
+            git commit -m "data: weekly spending refresh ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No data changes."
+          fi

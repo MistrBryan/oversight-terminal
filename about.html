@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-fx="on">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABOUT // OVERSIGHT TERMINAL</title>
+  <meta name="description" content="What OVERSIGHT is, how it is built, and its editorial principles." />
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">OVERSIGHT<span class="sep"> // </span><span class="sub">TERMINAL</span></div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Dashboard</a>
+        <a href="news.html">News</a>
+        <a href="sources.html">Sources</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+      <button class="fx-toggle" aria-pressed="false" title="Toggle CRT effects / high contrast">[ EFFECTS: ON ]</button>
+    </div>
+  </header>
+
+  <main class="wrap prose">
+    <div class="section-head"><h2 class="prompt">ABOUT</h2></div>
+
+    <p>OVERSIGHT TERMINAL is a public, open-source terminal for understanding how the U.S. federal government spends money, and for keeping an eye on questions of government overreach. It is built for the ordinary reader: big numbers, plain language, and a link to the source behind every claim.</p>
+
+    <h2>Principles</h2>
+    <ul>
+      <li><b>Data first.</b> The dashboard leads. Numbers come from official government feeds and are dated.</li>
+      <li><b>Show your work.</b> Every figure and headline links to its origin. Analysis is labeled and kept apart from data.</li>
+      <li><b>Transparency over false neutrality.</b> We label source lean openly instead of pretending it doesn't exist.</li>
+      <li><b>Link, don't reproduce.</b> News items are headlines and short summaries that send you to the original reporting.</li>
+    </ul>
+
+    <h2>How it's built</h2>
+    <p>A static site — no tracking, no accounts, no server. Government spending figures are refreshed automatically by a scheduled job that reads official APIs. Candidate news stories are surfaced automatically but only publish after a human approves them. The retro-terminal styling is an original design and is not affiliated with any game, studio, or agency.</p>
+
+    <div class="callout"><b>NOT ADVICE.</b> Nothing here is financial, investment, legal, or voting advice. It is a transparency tool. Verify anything important against the linked primary sources.</div>
+
+    <h2>Accessibility</h2>
+    <p>Prefer a calmer screen? Use <b>[ EFFECTS: OFF ]</b> in the top bar to disable scanlines and flicker and raise contrast. The site also honors your system's "reduce motion" setting automatically.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap"><span>OVERSIGHT TERMINAL</span><span><a href="sources.html">Sources &amp; Methodology</a></span></div>
+  </footer>
+
+  <script src="assets/js/effects.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "metrics": [
+    "federal-outlays",
+    "federal-deficit",
+    "federal-receipts",
+    "interest-on-debt",
+    "national-debt",
+    "debt-held-by-public",
+    "spending-by-function"
+  ],
+  "updatedAt": "2026-07-17"
+}

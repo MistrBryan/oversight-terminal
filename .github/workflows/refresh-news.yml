@@ -1,0 +1,49 @@
+name: refresh-news
+
+# Daily: surface candidate stories from the news feeds and open a PR that
+# stages them into data/news.json. A human APPROVES by trimming unwanted
+# rows and MERGING the PR — nothing publishes without a merge (flow A3).
+# See tools/fetch-feeds.mjs.
+
+on:
+  schedule:
+    - cron: "30 11 * * *"   # daily 11:30 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  surface:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch + stage news candidates
+        env:
+          APPEND_TO_NEWS: "1"
+        run: node tools/fetch-feeds.mjs
+
+      - name: Open / update approval PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: news/candidates
+          title: "news: candidate stories for approval"
+          commit-message: "news: surface candidate stories"
+          body: |
+            Automated news candidates surfaced from the configured feeds and
+            filtered to spending / overreach topics.
+
+            **To approve:** delete any rows you don't want from `data/news.json`
+            in this PR, then **merge**. Merging publishes the remaining items.
+
+            `data/news-candidates.json` holds the full unfiltered candidate list
+            for reference and is not shown on the site.
+          add-paths: |
+            data/news.json
+            data/news-candidates.json

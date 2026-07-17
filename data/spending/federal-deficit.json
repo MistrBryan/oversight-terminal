@@ -1,0 +1,34 @@
+{
+  "id": "federal-deficit",
+  "title": "Federal Deficit",
+  "unit": "USD_billions",
+  "series": [
+    {
+      "period": "FY21",
+      "value": 2772
+    },
+    {
+      "period": "FY22",
+      "value": 1375
+    },
+    {
+      "period": "FY23",
+      "value": 1695
+    },
+    {
+      "period": "FY24",
+      "value": 1833
+    },
+    {
+      "period": "FY25",
+      "value": 1775
+    }
+  ],
+  "dataSource": "Treasury Fiscal Data (MTS)",
+  "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
+  "fetchedAt": "2026-07-17",
+  "context": "The gap between what the government spent and what it collected in a fiscal year. A positive number means it spent more than it took in and had to borrow the difference.",
+  "why": "Persistent deficits add to the national debt and to future interest costs. Watching the deficit trend is the single clearest signal of fiscal direction.",
+  "contextSource": "The Hamilton Project",
+  "contextSourceUrl": "https://www.hamiltonproject.org/topic/fiscal-policy/"
+}

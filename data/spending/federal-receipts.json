@@ -1,0 +1,34 @@
+{
+  "id": "federal-receipts",
+  "title": "Federal Receipts",
+  "unit": "USD_billions",
+  "series": [
+    {
+      "period": "FY21",
+      "value": 4046
+    },
+    {
+      "period": "FY22",
+      "value": 4896
+    },
+    {
+      "period": "FY23",
+      "value": 4439
+    },
+    {
+      "period": "FY24",
+      "value": 4919
+    },
+    {
+      "period": "FY25",
+      "value": 5235
+    }
+  ],
+  "dataSource": "Treasury Fiscal Data (MTS)",
+  "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
+  "fetchedAt": "2026-07-17",
+  "context": "Total revenue the federal government collected in the fiscal year, mostly individual income taxes, payroll taxes, and corporate taxes.",
+  "why": "Receipts are the other half of the deficit equation. If outlays rise while receipts stay flat, the gap is driven by spending, not a revenue shortfall.",
+  "contextSource": "Brookings Institution",
+  "contextSourceUrl": "https://www.brookings.edu/topic/fiscal-policy/"
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-fx="on">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEWS // OVERSIGHT TERMINAL</title>
+  <meta name="description" content="Curated headlines on U.S. government spending and overreach, linking out to the original reporting." />
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">OVERSIGHT<span class="sep"> // </span><span class="sub">TERMINAL</span></div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Dashboard</a>
+        <a href="news.html" class="active">News</a>
+        <a href="sources.html">Sources</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="fx-toggle" aria-pressed="false" title="Toggle CRT effects / high contrast">[ EFFECTS: ON ]</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="section-head">
+      <h2 class="prompt">NEWS FEED</h2>
+      <span class="tag" id="news-count">…</span>
+    </div>
+    <p class="hero" style="padding-top:0"><span class="ctx" style="color:var(--text-dim);font-size:14px">Headlines and short summaries only — every item links out to the original reporting. Think-tank analysis is tagged <span class="badge commentary">COMMENTARY</span>. Source lean labels are our best-effort assessment, shown for transparency, not endorsement.</span></p>
+
+    <div class="filters" role="group" aria-label="Filter by topic"><span class="ctx" style="align-self:center;color:var(--text-dim);font-size:12px;margin-right:6px">TOPIC:</span><span id="topic-filters" style="display:contents"></span></div>
+    <div class="filters" role="group" aria-label="Filter by source"><span class="ctx" style="align-self:center;color:var(--text-dim);font-size:12px;margin-right:6px">SOURCE:</span><span id="source-filters" style="display:contents"></span></div>
+
+    <section id="news-list" aria-live="polite">
+      <div class="empty">// LOADING FEED…</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>News items are curated via pull-request approval. No full articles are reproduced.</span>
+      <span><a href="sources.html">Sources &amp; Methodology</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/effects.js"></script>
+  <script src="assets/js/news.js"></script>
+</body>
+</html>

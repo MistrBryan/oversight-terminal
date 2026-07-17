@@ -1,0 +1,45 @@
+{
+  "_comment": "Hand-curated plain-language context + think-tank citations, keyed by metric id. Numbers are NOT stored here — fetch-spending.mjs pulls those from official APIs and merges these fields in.",
+  "federal-outlays": {
+    "context": "Total money the federal government actually spent during the fiscal year, across every agency and program. This is the headline 'spending' number.",
+    "why": "Outlays are the broadest measure of the size of government. Compare the trend against receipts (what the government took in) to see whether spending is growing faster than revenue.",
+    "contextSource": "Penn Wharton Budget Model",
+    "contextSourceUrl": "https://budgetmodel.wharton.upenn.edu/issues/"
+  },
+  "federal-deficit": {
+    "context": "The gap between what the government spent and what it collected in a fiscal year. A positive number means it spent more than it took in and had to borrow the difference.",
+    "why": "Persistent deficits add to the national debt and to future interest costs. Watching the deficit trend is the single clearest signal of fiscal direction.",
+    "contextSource": "The Hamilton Project",
+    "contextSourceUrl": "https://www.hamiltonproject.org/topic/fiscal-policy/"
+  },
+  "federal-receipts": {
+    "context": "Total revenue the federal government collected in the fiscal year, mostly individual income taxes, payroll taxes, and corporate taxes.",
+    "why": "Receipts are the other half of the deficit equation. If outlays rise while receipts stay flat, the gap is driven by spending, not a revenue shortfall.",
+    "contextSource": "Brookings Institution",
+    "contextSourceUrl": "https://www.brookings.edu/topic/fiscal-policy/"
+  },
+  "national-debt": {
+    "context": "The total amount the federal government owes, accumulated from decades of deficits. Includes debt held by the public plus intragovernmental holdings.",
+    "why": "The debt is the running total of past borrowing. As it grows, so does the interest bill, which competes with every other spending priority.",
+    "contextSource": "Brookings Institution",
+    "contextSourceUrl": "https://www.brookings.edu/topic/fiscal-policy/"
+  },
+  "interest-on-debt": {
+    "context": "What the government pays each year to service the national debt — gross interest across all Treasury securities. This has roughly doubled in a few years as rates and debt both rose.",
+    "why": "Interest is now one of the largest single line items in the budget, rivaling defense. Every dollar of interest is a dollar not available for other priorities, and it grows automatically as debt compounds.",
+    "contextSource": "Penn Wharton Budget Model",
+    "contextSourceUrl": "https://budgetmodel.wharton.upenn.edu/issues/"
+  },
+  "debt-held-by-public": {
+    "context": "The portion of the national debt owed to outside investors — individuals, funds, and foreign governments — as opposed to money the government owes itself (like the Social Security trust funds).",
+    "why": "Economists usually treat debt held by the public as the most meaningful debt measure, because it reflects actual borrowing from financial markets and drives interest costs.",
+    "contextSource": "The Hamilton Project",
+    "contextSourceUrl": "https://www.hamiltonproject.org/topic/fiscal-policy/"
+  },
+  "spending-by-function": {
+    "context": "How federal spending splits across major purposes — Social Security, Medicare, defense, interest, and so on — for the most recent completed fiscal year, per USAspending.gov.",
+    "why": "The category mix shows where the money actually goes. Note USAspending uses a broader, account-level basis than the Treasury outlays figure, so its total is larger and the two won't reconcile exactly — read this for the relative shares, not the grand total.",
+    "contextSource": "Brookings Institution",
+    "contextSourceUrl": "https://www.brookings.edu/topic/fiscal-policy/"
+  }
+}

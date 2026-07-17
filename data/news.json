@@ -1,0 +1,86 @@
+[
+  {
+    "id": "n1mmb8u4",
+    "title": "Top IRS lawyer to resign amid disputes with the administration",
+    "summary": "Reports point to a contested settlement deal and disagreements over tax audits behind the departure of the agency's chief counsel.",
+    "url": "https://www.aljazeera.com/news/2026/7/17/top-irs-lawyer-to-resign-post-amid-disagreements-with-trump-administration",
+    "source": "Al Jazeera",
+    "lean": "center",
+    "type": "news",
+    "topic": ["spending"],
+    "publishedAt": "2026-07-17",
+    "approvedAt": "2026-07-17"
+  },
+  {
+    "id": "n6w5fnc",
+    "title": "Speaker's government-funding gambit: an early vote on a stopgap bill",
+    "summary": "House leadership wants a conspicuously early vote on a short-term funding bill — more than two months before the government would run out of money.",
+    "url": "https://www.axios.com/2026/07/16/reconciliation-government-funding-republicans-mike-johnson",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": ["spending"],
+    "publishedAt": "2026-07-16",
+    "approvedAt": "2026-07-17"
+  },
+  {
+    "id": "nrsuwdd",
+    "title": "House Republicans' $95 billion package clears its first hurdle",
+    "summary": "A $95 billion spending package tied to defense and other priorities advanced past an initial procedural vote in the House.",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNT2Z6Zkp3dkVZVS02alVCeE9IMC1DaXlZUHVWa3NqNHhxQlcxWW02M2tPZ1V2UUZIbUVEOFUxTl9DVHp4LXN2RXRQTl9Id3pCQk9la0VfckdUODBNNUV4Ul9aUnVhM3BMNlNDcXlVeEdObzBpRGZmN2lZSjdUcGd5UVpDVGdqaTF6X1lBeHdrY29RMDlZUGRN?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": ["spending"],
+    "publishedAt": "2026-07-16",
+    "approvedAt": "2026-07-17"
+  },
+  {
+    "id": "nz9uhpz",
+    "title": "GOP angst persists over $95 billion reconciliation package",
+    "summary": "A leadership pitch did little to ease House Republican concerns over the reconciliation package ahead of a planned floor vote next week.",
+    "url": "https://www.axios.com/2026/07/15/house-republicans-budget-save-act-iran-war-jd-vance",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": ["spending"],
+    "publishedAt": "2026-07-15",
+    "approvedAt": "2026-07-17"
+  },
+  {
+    "id": "nmfln5a",
+    "title": "Deportation push is rewiring American policing, ACLU report says",
+    "summary": "A new ACLU report says immigration enforcement has expanded beyond ICE, drawing federal agents, state troopers and local police into a roughly 50,000-person internal enforcement force.",
+    "url": "https://www.axios.com/2026/07/16/aclu-immigration-local-policing-deportations",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": ["overreach", "spending"],
+    "publishedAt": "2026-07-16",
+    "approvedAt": "2026-07-17"
+  },
+  {
+    "id": "n1jy8x97",
+    "title": "Administration reverses DHS pause on ICE vehicle stops",
+    "summary": "The White House reversed a Homeland Security decision to pause the kind of ICE vehicle stops that had led to two fatal shootings.",
+    "url": "https://www.axios.com/2026/07/16/trump-ice-shootings-vehicle-stops",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": ["overreach"],
+    "publishedAt": "2026-07-16",
+    "approvedAt": "2026-07-17"
+  },
+  {
+    "id": "n13ewnuf",
+    "title": "Nonprofit is feeding lawmakers model legislation, report finds",
+    "summary": "An investigation describes an outside nonprofit drafting and circulating model legislation to members of Congress, raising questions about influence over lawmaking.",
+    "url": "https://www.dropsitenews.com/p/israel-backed-nonprofit-lawmakers-draft-legislation",
+    "source": "Drop Site News",
+    "lean": "left",
+    "type": "news",
+    "topic": ["overreach"],
+    "publishedAt": "2026-07-13",
+    "approvedAt": "2026-07-17"
+  }
+]

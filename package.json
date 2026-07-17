@@ -1,0 +1,15 @@
+{
+  "name": "oversight-terminal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Oversight Terminal — retro-terminal tracker for U.S. government spending and overreach, with official-API data + curated news.",
+  "scripts": {
+    "fetch:data": "node tools/fetch-spending.mjs",
+    "fetch:news": "node tools/fetch-feeds.mjs",
+    "serve": "npx --yes serve@14 . -l 4173"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
