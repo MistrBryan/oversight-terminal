@@ -3,6 +3,10 @@ name: refresh-data
 # Weekly refresh of spending figures from official government APIs.
 # Numbers are authoritative and non-partisan, so this commits directly
 # (no approval gate). See tools/fetch-spending.mjs.
+#
+# NOTE: this workflow also deploys to Pages itself. A commit pushed with the
+# built-in GITHUB_TOKEN does NOT trigger the on:push deploy (static.yml), so
+# without deploying here the refreshed data would never reach the live site.
 
 on:
   schedule:
@@ -11,10 +15,19 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -24,7 +37,7 @@ jobs:
 
       - name: Fetch spending data
         env:
-          # Optional: enables FRED-backed metrics in fetch-spending.mjs.
+          # Enables the FRED %-of-GDP metrics in fetch-spending.mjs.
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: node tools/fetch-spending.mjs
 
@@ -39,3 +52,12 @@ jobs:
           else
             echo "No data changes."
           fi
+
+      # Deploy the current tree (with refreshed data) to Pages, since the
+      # data commit above won't trigger the on:push deploy workflow.
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
