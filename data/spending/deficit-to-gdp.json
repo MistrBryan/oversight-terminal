@@ -1,0 +1,38 @@
+{
+  "id": "deficit-to-gdp",
+  "title": "Deficit as % of GDP",
+  "unit": "percent",
+  "series": [
+    {
+      "period": "2020",
+      "value": 14.5
+    },
+    {
+      "period": "2021",
+      "value": 11.7
+    },
+    {
+      "period": "2022",
+      "value": 5.3
+    },
+    {
+      "period": "2023",
+      "value": 6.1
+    },
+    {
+      "period": "2024",
+      "value": 6.2
+    },
+    {
+      "period": "2025",
+      "value": 5.8
+    }
+  ],
+  "dataSource": "FRED (FYFSGDA188S)",
+  "dataSourceUrl": "https://fred.stlouisfed.org/series/FYFSGDA188S",
+  "fetchedAt": "2026-07-18",
+  "context": "The annual deficit as a share of the economy. Roughly 3% is often cited as a sustainable long-run level; readings well above that in a growing economy are unusual.",
+  "why": "Scaling the deficit to GDP lets you compare across years and eras fairly. Large deficits during economic expansion (not recession) are what worry fiscal analysts most.",
+  "contextSource": "The Hamilton Project",
+  "contextSourceUrl": "https://www.hamiltonproject.org/topic/fiscal-policy/"
+}

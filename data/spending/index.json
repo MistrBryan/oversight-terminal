@@ -6,6 +6,9 @@
     "interest-on-debt",
     "national-debt",
     "debt-held-by-public",
+    "debt-to-gdp",
+    "deficit-to-gdp",
+    "outlays-to-gdp",
     "spending-by-function"
   ],
   "updatedAt": "2026-07-18"

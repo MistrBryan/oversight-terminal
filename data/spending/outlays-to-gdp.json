@@ -1,0 +1,38 @@
+{
+  "id": "outlays-to-gdp",
+  "title": "Spending as % of GDP",
+  "unit": "percent",
+  "series": [
+    {
+      "period": "2020",
+      "value": 30.5
+    },
+    {
+      "period": "2021",
+      "value": 28.7
+    },
+    {
+      "period": "2022",
+      "value": 24.1
+    },
+    {
+      "period": "2023",
+      "value": 22
+    },
+    {
+      "period": "2024",
+      "value": 23
+    },
+    {
+      "period": "2025",
+      "value": 22.8
+    }
+  ],
+  "dataSource": "FRED (FYONGDA188S)",
+  "dataSourceUrl": "https://fred.stlouisfed.org/series/FYONGDA188S",
+  "fetchedAt": "2026-07-18",
+  "context": "Total federal spending as a share of the economy — how big the federal government is relative to everything the country produces in a year.",
+  "why": "This is the cleanest single measure of the government's economic footprint over time, stripping out inflation and growth so different years are comparable.",
+  "contextSource": "Brookings Institution",
+  "contextSourceUrl": "https://www.brookings.edu/topic/fiscal-policy/"
+}
