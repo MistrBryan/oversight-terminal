@@ -12,9 +12,10 @@
    In CI:         .github/workflows/refresh-data.yml (weekly cron)
 
    Sources:
-     - Treasury Fiscal Data API  (no key)   -> outlays, deficit, receipts, debt
-     - USAspending.gov API       (no key)   -> [extend here: agency/award breakdowns]
-     - FRED (St. Louis Fed)      (free key)  -> [extend here: set FRED_API_KEY]
+     - Treasury Fiscal Data API  (no key)   -> outlays, deficit, receipts, debt, interest
+     - USAspending.gov API       (no key)   -> spending by budget function (breakdown)
+     - FRED (St. Louis Fed)      (free key)  -> debt/deficit/spending as % of GDP
+                                               (set FRED_API_KEY; skipped if absent)
    ============================================================ */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -28,13 +29,23 @@ const OUT = join(ROOT, "data", "spending");
 const FISCAL = "https://api.fiscaldata.treasury.gov/services/api/fiscal_service";
 const YEARS = [2021, 2022, 2023, 2024, 2025]; // fiscal years to chart
 const today = new Date().toISOString().slice(0, 10);
+const FRED_KEY = process.env.FRED_API_KEY; // optional; enables the %-of-GDP metrics
 
 const toB = (amt) => Math.round(Number(amt) / 1e9); // dollars -> whole $B
 
-async function getJSON(url) {
-  const res = await fetch(url, { headers: { accept: "application/json" } });
-  if (!res.ok) throw new Error(`${res.status} ${res.statusText} for ${url}`);
-  return res.json();
+async function getJSON(url, tries = 3) {
+  let lastErr;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url, { headers: { accept: "application/json" } });
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText} for ${url}`);
+      return await res.json();
+    } catch (e) {
+      lastErr = e;
+      if (i < tries - 1) await new Promise((r) => setTimeout(r, 1500 * (i + 1)));
+    }
+  }
+  throw lastErr;
 }
 
 /* ---- Monthly Treasury Statement: annual outlays / receipts / deficit ---- */
@@ -135,6 +146,49 @@ async function usaspendingByFunction() {
   return null;
 }
 
+/* ---- FRED (St. Louis Fed): fiscal ratios to GDP (needs free API key) ---- */
+async function fredSeries(seriesId, { negate = false, lastN = 6 } = {}) {
+  const url = "https://api.stlouisfed.org/fred/series/observations" +
+    `?series_id=${seriesId}&api_key=${FRED_KEY}&file_type=json` +
+    "&observation_start=2016-01-01&sort_order=asc";
+  const { observations } = await getJSON(url);
+  // collapse to one point per calendar year (last valid obs of each year)
+  const byYear = new Map();
+  for (const o of observations) {
+    if (o.value === "." || o.value === "") continue;
+    byYear.set(o.date.slice(0, 4), o.value); // asc order => keeps latest of year
+  }
+  return [...byYear.keys()].sort().slice(-lastN).map((y) => {
+    let v = Number(byYear.get(y));
+    if (negate) v = -v;
+    return { period: y, value: Math.round(v * 10) / 10 };
+  });
+}
+
+async function fredMetrics() {
+  if (!FRED_KEY) { console.log("> FRED_API_KEY not set — skipping FRED %-of-GDP metrics"); return []; }
+  console.log("> fetching FRED (% of GDP) series …");
+  const defs = [
+    { id: "debt-to-gdp",    title: "Debt as % of GDP",     seriesId: "GFDEGDQ188S", opts: {} },
+    { id: "deficit-to-gdp", title: "Deficit as % of GDP",  seriesId: "FYFSGDA188S", opts: { negate: true } },
+    { id: "outlays-to-gdp", title: "Spending as % of GDP",  seriesId: "FYONGDA188S", opts: {} },
+  ];
+  const out = [];
+  for (const d of defs) {
+    try {
+      const series = await fredSeries(d.seriesId, d.opts);
+      if (!series.length) { console.warn(`  ! FRED ${d.seriesId}: no observations`); continue; }
+      out.push({
+        id: d.id, title: d.title, unit: "percent", series,
+        dataSource: `FRED (${d.seriesId})`,
+        dataSourceUrl: `https://fred.stlouisfed.org/series/${d.seriesId}`,
+      });
+      console.log(`  ✓ ${d.id.padEnd(16)} ${series.length} pts, latest ${series[series.length - 1].period}=${series[series.length - 1].value}%`);
+    } catch (e) { console.warn(`  ! FRED ${d.seriesId}: ${e.message}`); }
+  }
+  return out;
+}
+
 async function main() {
   await mkdir(OUT, { recursive: true });
   const context = JSON.parse(await readFile(join(__dirname, "context.json"), "utf8"));
@@ -148,6 +202,7 @@ async function main() {
   const interest = await treasuryInterest();
   console.log("> fetching USAspending budget-function breakdown …");
   const byFunction = await usaspendingByFunction();
+  const fred = await fredMetrics();
 
   const metrics = [
     { id: "federal-outlays", title: "Federal Outlays", unit: "USD_billions", series: mts.outlays,
@@ -165,6 +220,7 @@ async function main() {
     { id: "debt-held-by-public", title: "Debt Held by the Public", unit: "USD_billions", series: debt.heldPublic,
       dataSource: "Treasury Fiscal Data (Debt to the Penny)",
       dataSourceUrl: "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" },
+    ...fred, // %-of-GDP ratios (only present when FRED_API_KEY is set)
   ];
 
   if (byFunction) {

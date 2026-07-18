@@ -130,12 +130,22 @@
     } else {
       var latest = metric.series[metric.series.length - 1];
       neg = latest.value < 0;
-      var change = pctChange(metric.series), deltaHtml = "";
-      if (change !== null) {
-        var up = change >= 0;
+      var prev = metric.series[metric.series.length - 2];
+      var deltaHtml = "";
+      if (prev) {
+        var up, amount;
+        if (metric.unit === "percent") {
+          // percentage-POINT change is the correct reading for a ratio
+          var diff = latest.value - prev.value;
+          up = diff >= 0;
+          amount = Math.abs(diff).toFixed(1) + " pts";
+        } else {
+          var change = pctChange(metric.series);
+          up = change >= 0;
+          amount = Math.abs(change).toFixed(1) + "%";
+        }
         deltaHtml = "<div class='delta " + (up ? "up" : "down") + "'>" +
-          (up ? "▲ " : "▼ ") + Math.abs(change).toFixed(1) +
-          "% vs " + metric.series[metric.series.length - 2].period + "</div>";
+          (up ? "▲ " : "▼ ") + amount + " vs " + prev.period + "</div>";
       }
       mid = "<div class='value " + (neg ? "neg" : "") + "'>" + fmtValue(latest.value, metric.unit) + "</div>" +
         deltaHtml + "<div class='spark'><canvas></canvas></div>";

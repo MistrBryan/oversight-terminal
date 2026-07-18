@@ -26,7 +26,7 @@
   ],
   "dataSource": "Treasury Fiscal Data (MTS)",
   "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
-  "fetchedAt": "2026-07-17",
+  "fetchedAt": "2026-07-18",
   "context": "The gap between what the government spent and what it collected in a fiscal year. A positive number means it spent more than it took in and had to borrow the difference.",
   "why": "Persistent deficits add to the national debt and to future interest costs. Watching the deficit trend is the single clearest signal of fiscal direction.",
   "contextSource": "The Hamilton Project",

@@ -26,7 +26,7 @@
   ],
   "dataSource": "Treasury Fiscal Data (Interest Expense)",
   "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/interest-expense-debt-outstanding/",
-  "fetchedAt": "2026-07-17",
+  "fetchedAt": "2026-07-18",
   "context": "What the government pays each year to service the national debt — gross interest across all Treasury securities. This has roughly doubled in a few years as rates and debt both rose.",
   "why": "Interest is now one of the largest single line items in the budget, rivaling defense. Every dollar of interest is a dollar not available for other priorities, and it grows automatically as debt compounds.",
   "contextSource": "Penn Wharton Budget Model",

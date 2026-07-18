@@ -36,6 +36,24 @@
     "contextSource": "The Hamilton Project",
     "contextSourceUrl": "https://www.hamiltonproject.org/topic/fiscal-policy/"
   },
+  "debt-to-gdp": {
+    "context": "The national debt measured against the size of the whole economy. Economists watch this ratio more than the raw dollar figure, because it shows whether debt is growing faster than the country's ability to carry it.",
+    "why": "A debt load near or above 100% of GDP is historically high for the U.S. outside wartime. The ratio, not the raw number, is what credit-rating agencies and economists judge sustainability by.",
+    "contextSource": "Penn Wharton Budget Model",
+    "contextSourceUrl": "https://budgetmodel.wharton.upenn.edu/issues/"
+  },
+  "deficit-to-gdp": {
+    "context": "The annual deficit as a share of the economy. Roughly 3% is often cited as a sustainable long-run level; readings well above that in a growing economy are unusual.",
+    "why": "Scaling the deficit to GDP lets you compare across years and eras fairly. Large deficits during economic expansion (not recession) are what worry fiscal analysts most.",
+    "contextSource": "The Hamilton Project",
+    "contextSourceUrl": "https://www.hamiltonproject.org/topic/fiscal-policy/"
+  },
+  "outlays-to-gdp": {
+    "context": "Total federal spending as a share of the economy — how big the federal government is relative to everything the country produces in a year.",
+    "why": "This is the cleanest single measure of the government's economic footprint over time, stripping out inflation and growth so different years are comparable.",
+    "contextSource": "Brookings Institution",
+    "contextSourceUrl": "https://www.brookings.edu/topic/fiscal-policy/"
+  },
   "spending-by-function": {
     "context": "How federal spending splits across major purposes — Social Security, Medicare, defense, interest, and so on — for the most recent completed fiscal year, per USAspending.gov.",
     "why": "The category mix shows where the money actually goes. Note USAspending uses a broader, account-level basis than the Treasury outlays figure, so its total is larger and the two won't reconcile exactly — read this for the relative shares, not the grand total.",
