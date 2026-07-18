@@ -7,7 +7,6 @@
   <meta name="description" content="Every data source and news source used by OVERSIGHT, its known lean, and how figures are collected." />
   <link rel="stylesheet" href="assets/css/fonts.css" />
   <link rel="stylesheet" href="assets/css/theme.css" />
-  <link rel="stylesheet" href="assets/css/app.css" />
 </head>
 <body>
   <header class="topbar">
@@ -36,8 +35,12 @@
       <tr><th>Source</th><th>What we pull</th><th>Key?</th><th>Lean</th></tr>
       <tr><td><a href="https://fiscaldata.treasury.gov/" target="_blank" rel="noopener">Treasury Fiscal Data</a></td><td>Outlays, deficit, national debt</td><td>None</td><td>Official / non-partisan</td></tr>
       <tr><td><a href="https://www.usaspending.gov/" target="_blank" rel="noopener">USAspending.gov</a></td><td>Federal awards &amp; agency spending</td><td>None</td><td>Official / non-partisan</td></tr>
-      <tr><td><a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED (St. Louis Fed)</a></td><td>Macro &amp; budget time series</td><td>Free key</td><td>Official / non-partisan</td></tr>
+      <tr><td><a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED (St. Louis Fed)</a></td><td>Debt, deficit &amp; spending as % of GDP</td><td>Free key</td><td>Official / non-partisan</td></tr>
     </table>
+    <p style="font-size:13px">The %-of-GDP ratios are pulled from these specific FRED series:
+      <a href="https://fred.stlouisfed.org/series/GFDEGDQ188S" target="_blank" rel="noopener">GFDEGDQ188S</a> (debt as % of GDP),
+      <a href="https://fred.stlouisfed.org/series/FYFSGDA188S" target="_blank" rel="noopener">FYFSGDA188S</a> (deficit as % of GDP),
+      <a href="https://fred.stlouisfed.org/series/FYONGDA188S" target="_blank" rel="noopener">FYONGDA188S</a> (net outlays as % of GDP).</p>
 
     <h2>Context &amp; analysis — think tanks</h2>
     <p>Interpretation ("what does this number mean?") is drawn from research institutions and <b>clearly separated from the raw data</b>. These organizations do analysis, not neutral reporting, and generally sit center to center-left. We cite them per metric.</p>

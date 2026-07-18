@@ -41,9 +41,5 @@ jobs:
 
             **To approve:** delete any rows you don't want from `data/news.json`
             in this PR, then **merge**. Merging publishes the remaining items.
-
-            `data/news-candidates.json` holds the full unfiltered candidate list
-            for reference and is not shown on the site.
           add-paths: |
             data/news.json
-            data/news-candidates.json

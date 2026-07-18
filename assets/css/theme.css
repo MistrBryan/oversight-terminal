@@ -194,7 +194,6 @@ a:hover { color: #a6ecff; background: rgba(79,214,255,0.08); }
 /* ---------- panels / cards ---------- */
 .grid { display: grid; gap: var(--gap); }
 .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-.grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
 
 .panel {
   background: linear-gradient(180deg, var(--bg-panel), var(--bg-panel-2));
@@ -307,7 +306,7 @@ a:hover { color: #a6ecff; background: rgba(79,214,255,0.08); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 880px) {
-  .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; }
+  .grid.cols-3 { grid-template-columns: 1fr; }
   .brand { font-size: 22px; }
   .brand .sub { display: none; }
   .topbar .wrap { height: auto; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap; }
