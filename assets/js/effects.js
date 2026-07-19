@@ -4,6 +4,17 @@
 (function () {
   "use strict";
 
+  /* ---- clickjacking defense (frame-buster) ----
+     GitHub Pages can't send X-Frame-Options / CSP frame-ancestors headers.
+     If this page is framed by another origin: try to break out (browsers may
+     block cross-origin top navigation without a gesture), AND hide the content
+     regardless — a hidden page has nothing to clickjack. Only bypassable if the
+     attacker sandboxes scripts off, in which case none of our JS runs anyway. */
+  if (window.self !== window.top) {
+    try { window.top.location = window.self.location; } catch (e) { /* nav blocked */ }
+    document.documentElement.style.setProperty("display", "none", "important");
+  }
+
   /* ---- persisted effects / high-contrast toggle ---- */
   var FX_KEY = "oversight-fx";
   function applyFx(state) {
