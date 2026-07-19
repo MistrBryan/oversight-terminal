@@ -27,21 +27,29 @@
       var commentary = it.type === "commentary";
       return "<article class='news-item'>" +
         "<div class='meta'>" +
-          "<span class='badge " + leanClass(it.lean) + "'>" + it.source + "</span>" +
+          "<span class='badge " + leanClass(it.lean) + "'>" + escapeHtml(it.source) + "</span>" +
           (commentary ? "<span class='badge commentary'>COMMENTARY</span>" : "") +
-          (it.topic || []).map(function (t) { return "<span class='badge'>" + t + "</span>"; }).join("") +
-          "<time datetime='" + it.publishedAt + "'>" + it.publishedAt + "</time>" +
+          (it.topic || []).map(function (t) { return "<span class='badge'>" + escapeHtml(t) + "</span>"; }).join("") +
+          "<time datetime='" + escapeHtml(it.publishedAt) + "'>" + escapeHtml(it.publishedAt) + "</time>" +
         "</div>" +
-        "<h3><a href='" + it.url + "' target='_blank' rel='noopener'>" + escapeHtml(it.title) + " ↗</a></h3>" +
+        "<h3><a href='" + safeUrl(it.url) + "' target='_blank' rel='noopener noreferrer'>" + escapeHtml(it.title) + " ↗</a></h3>" +
         "<p class='summary'>" + escapeHtml(it.summary || "") + "</p>" +
       "</article>";
     }).join("");
   }
 
+  // escapes the single quote too — attributes below are single-quoted
   function escapeHtml(s) {
-    return String(s).replace(/[&<>"]/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
+  }
+
+  // only http(s) links may reach an href — blocks javascript:/data: URLs
+  function safeUrl(u) {
+    var s = String(u == null ? "" : u).trim();
+    if (!/^https?:\/\//i.test(s)) return "#";
+    return escapeHtml(s);
   }
 
   function buildFilters() {
@@ -56,7 +64,7 @@
     if (!host) return;
     host.innerHTML = values.map(function (v) {
       return "<button class='chip " + (state[key] === v ? "active" : "") +
-        "' data-key='" + key + "' data-val='" + v + "'>" + v + "</button>";
+        "' data-key='" + key + "' data-val='" + escapeHtml(v) + "'>" + escapeHtml(v) + "</button>";
     }).join("");
   }
 

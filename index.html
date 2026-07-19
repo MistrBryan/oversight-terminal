@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>OVERSIGHT TERMINAL</title>
   <meta name="description" content="A transparent, source-cited terminal for tracking U.S. government spending and reporting on government overreach." />
   <link rel="stylesheet" href="assets/css/fonts.css" />
@@ -63,19 +65,6 @@
   <script src="assets/js/chart.umd.min.js"></script>
   <script src="assets/js/effects.js"></script>
   <script src="assets/js/dashboard.js"></script>
-  <script>
-    OVERSIGHT.boot([
-      "OVERSIGHT TERMINAL — UNIFIED FISCAL MONITOR",
-      "COPYRIGHT (C) PUBLIC DOMAIN DATA / OPEN SOURCE",
-      "",
-      "> MOUNTING DATA VOLUMES ......... OK",
-      "> CONNECTING TREASURY FISCAL DATA ... OK",
-      "> CONNECTING USASPENDING.GOV ....... OK",
-      "> CONNECTING FRED (ST. LOUIS FED) ... OK",
-      "> LOADING CURATED CONTEXT LAYER .... OK",
-      "",
-      "INITIALIZING OVERSIGHT TERMINAL_"
-    ]);
-  </script>
+  <script src="assets/js/boot-lines.js"></script>
 </body>
 </html>

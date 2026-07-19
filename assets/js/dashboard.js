@@ -1,5 +1,5 @@
 /* dashboard.js — renders spending metric cards + detail view from
-   data/spending/*.json. Requires Chart.js (loaded via CDN in the page). */
+   data/spending/*.json. Requires Chart.js (self-hosted, loaded in the page). */
 
 (function () {
   "use strict";
@@ -17,6 +17,18 @@
     return v.toLocaleString();
   }
   function fmtPlain(v) { return fmtValue(v, "USD_billions").replace(/<[^>]+>/g, ""); }
+
+  // metric text originates from third-party APIs — never trust it as markup
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function safeUrl(u) {
+    var s = String(u == null ? "" : u).trim();
+    if (!/^https?:\/\//i.test(s)) return "#";
+    return esc(s);
+  }
 
   // group a breakdown into top N + aggregated "Other"
   function topN(breakdown, n) {
@@ -109,7 +121,7 @@
     var max = Math.max.apply(null, breakdown.map(function (c) { return c.value; }));
     return "<div class='catbars'>" + top.map(function (c, i) {
       return "<div class='catbar'>" +
-        "<span class='cn'><i style='background:" + PIE[i % PIE.length] + "'></i>" + c.name + "</span>" +
+        "<span class='cn'><i style='background:" + PIE[i % PIE.length] + "'></i>" + esc(c.name) + "</span>" +
         "<span class='cv'>" + fmtPlain(c.value) + "</span>" +
         "<b style='width:" + Math.round(c.value / max * 100) + "%'></b></div>";
     }).join("") + "</div>";
@@ -133,18 +145,25 @@
       var prev = metric.series[metric.series.length - 2];
       var deltaHtml = "";
       if (prev) {
-        var up, amount;
+        var up, amount, magnitude;
         if (metric.unit === "percent") {
           // percentage-POINT change is the correct reading for a ratio
           var diff = latest.value - prev.value;
           up = diff >= 0;
-          amount = Math.abs(diff).toFixed(1) + " pts";
+          magnitude = Math.abs(diff);
+          amount = magnitude.toFixed(1) + " pts";
         } else {
           var change = pctChange(metric.series);
           up = change >= 0;
-          amount = Math.abs(change).toFixed(1) + "%";
+          magnitude = Math.abs(change);
+          amount = magnitude.toFixed(1) + "%";
         }
-        deltaHtml = "<div class='delta " + (up ? "up" : "down") + "'>" +
+        // a change that rounds to 0.0 is not a rise or fall — don't imply one
+        if (magnitude < 0.05) {
+          deltaHtml = "<div class='delta' style='color:var(--text-dim)'>— unchanged vs " + prev.period + "</div>";
+          up = null;
+        }
+        if (up !== null) deltaHtml = "<div class='delta " + (up ? "up" : "down") + "'>" +
           (up ? "▲ " : "▼ ") + amount + " vs " + prev.period + "</div>";
       }
       mid = "<div class='value " + (neg ? "neg" : "") + "'>" + fmtValue(latest.value, metric.unit) + "</div>" +
@@ -152,13 +171,13 @@
     }
 
     el.innerHTML =
-      "<div class='label'><span>" + metric.title + "</span>" +
+      "<div class='label'><span>" + esc(metric.title) + "</span>" +
         "<span class='badge data'>DATA</span></div>" +
       mid +
-      "<div class='ctx'>" + (metric.context || "") + "</div>" +
+      "<div class='ctx'>" + esc(metric.context) + "</div>" +
       "<div class='label' style='margin-top:10px'>" +
-        "<span class='source-link'>SRC: " + metric.dataSource + "</span>" +
-        "<span class='source-link'>" + (metric.fetchedAt || "") + "</span></div>";
+        "<span class='source-link'>SRC: " + esc(metric.dataSource) + "</span>" +
+        "<span class='source-link'>" + esc(metric.fetchedAt) + "</span></div>";
 
     if (!isBreak) {
       setTimeout(function () {
@@ -184,7 +203,7 @@
       headValue = fmtValue(metric.total, "USD_billions");
       listHtml = "<table class='src-table' style='margin-top:6px'><tr><th>Category</th><th>Amount</th><th>Share</th></tr>" +
         metric.breakdown.map(function (c) {
-          return "<tr><td>" + c.name + "</td><td>" + fmtPlain(c.value) + "</td><td>" +
+          return "<tr><td>" + esc(c.name) + "</td><td>" + fmtPlain(c.value) + "</td><td>" +
             (c.value / metric.total * 100).toFixed(1) + "%</td></tr>";
         }).join("") + "</table>";
     } else {
@@ -194,18 +213,18 @@
     }
 
     modal.querySelector(".detail-body").innerHTML =
-      "<div class='section-head'><h2>" + metric.title + "</h2>" +
+      "<div class='section-head'><h2>" + esc(metric.title) + "</h2>" +
         "<span class='tag'>" + (isBreak ? "USASPENDING.GOV" : metric.unit.replace("_", " ")) + "</span></div>" +
       "<div class='value' style='font-size:52px'>" + headValue + "</div>" +
       "<div style='height:280px;margin:14px 0'><canvas id='detail-canvas'></canvas></div>" +
-      "<p class='ctx' style='font-size:15px'>" + (metric.context || "") + "</p>" +
+      "<p class='ctx' style='font-size:15px'>" + esc(metric.context) + "</p>" +
       "<div class='callout'><b>WHY THIS MATTERS.</b> " +
-        (metric.why || "This figure is one input into the overall fiscal picture; read it alongside the other metrics rather than in isolation.") + "</div>" +
+        esc(metric.why || "This figure is one input into the overall fiscal picture; read it alongside the other metrics rather than in isolation.") + "</div>" +
       listHtml +
-      "<table class='src-table'><tr><th>Numbers</th><td><a href='" + metric.dataSourceUrl +
-        "' target='_blank' rel='noopener'>" + metric.dataSource + "</a> · fetched " + metric.fetchedAt + "</td></tr>" +
-      (metric.contextSource ? "<tr><th>Context</th><td><a href='" + (metric.contextSourceUrl || "#") +
-        "' target='_blank' rel='noopener'>" + metric.contextSource + "</a></td></tr>" : "") +
+      "<table class='src-table'><tr><th>Numbers</th><td><a href='" + safeUrl(metric.dataSourceUrl) +
+        "' target='_blank' rel='noopener noreferrer'>" + esc(metric.dataSource) + "</a> · fetched " + esc(metric.fetchedAt) + "</td></tr>" +
+      (metric.contextSource ? "<tr><th>Context</th><td><a href='" + safeUrl(metric.contextSourceUrl) +
+        "' target='_blank' rel='noopener noreferrer'>" + esc(metric.contextSource) + "</a></td></tr>" : "") +
       "</table>";
 
     modal.classList.add("open");
