@@ -30,7 +30,7 @@
   ],
   "dataSource": "Treasury Fiscal Data (Debt to the Penny)",
   "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
-  "fetchedAt": "2026-07-18",
+  "fetchedAt": "2026-07-20",
   "context": "The portion of the national debt owed to outside investors — individuals, funds, and foreign governments — as opposed to money the government owes itself (like the Social Security trust funds).",
   "why": "Economists usually treat debt held by the public as the most meaningful debt measure, because it reflects actual borrowing from financial markets and drives interest costs.",
   "contextSource": "The Hamilton Project",

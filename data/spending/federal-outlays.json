@@ -26,7 +26,7 @@
   ],
   "dataSource": "Treasury Fiscal Data (MTS)",
   "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
-  "fetchedAt": "2026-07-18",
+  "fetchedAt": "2026-07-20",
   "context": "Total money the federal government actually spent during the fiscal year, across every agency and program. This is the headline 'spending' number.",
   "why": "Outlays are the broadest measure of the size of government. Compare the trend against receipts (what the government took in) to see whether spending is growing faster than revenue.",
   "contextSource": "Penn Wharton Budget Model",

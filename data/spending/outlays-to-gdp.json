@@ -30,7 +30,7 @@
   ],
   "dataSource": "FRED (FYONGDA188S)",
   "dataSourceUrl": "https://fred.stlouisfed.org/series/FYONGDA188S",
-  "fetchedAt": "2026-07-18",
+  "fetchedAt": "2026-07-20",
   "context": "Total federal spending as a share of the economy — how big the federal government is relative to everything the country produces in a year.",
   "why": "This is the cleanest single measure of the government's economic footprint over time, stripping out inflation and growth so different years are comparable.",
   "contextSource": "Brookings Institution",

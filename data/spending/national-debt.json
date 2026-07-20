@@ -30,7 +30,7 @@
   ],
   "dataSource": "Treasury Fiscal Data (Debt to the Penny)",
   "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
-  "fetchedAt": "2026-07-18",
+  "fetchedAt": "2026-07-20",
   "context": "The total amount the federal government owes, accumulated from decades of deficits. Includes debt held by the public plus intragovernmental holdings.",
   "why": "The debt is the running total of past borrowing. As it grows, so does the interest bill, which competes with every other spending priority.",
   "contextSource": "Brookings Institution",

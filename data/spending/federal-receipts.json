@@ -26,7 +26,7 @@
   ],
   "dataSource": "Treasury Fiscal Data (MTS)",
   "dataSourceUrl": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
-  "fetchedAt": "2026-07-18",
+  "fetchedAt": "2026-07-20",
   "context": "Total revenue the federal government collected in the fiscal year, mostly individual income taxes, payroll taxes, and corporate taxes.",
   "why": "Receipts are the other half of the deficit equation. If outlays rise while receipts stay flat, the gap is driven by spending, not a revenue shortfall.",
   "contextSource": "Brookings Institution",

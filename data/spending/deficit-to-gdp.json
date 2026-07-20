@@ -30,7 +30,7 @@
   ],
   "dataSource": "FRED (FYFSGDA188S)",
   "dataSourceUrl": "https://fred.stlouisfed.org/series/FYFSGDA188S",
-  "fetchedAt": "2026-07-18",
+  "fetchedAt": "2026-07-20",
   "context": "The annual deficit as a share of the economy. Roughly 3% is often cited as a sustainable long-run level; readings well above that in a growing economy are unusual.",
   "why": "Scaling the deficit to GDP lets you compare across years and eras fairly. Large deficits during economic expansion (not recession) are what worry fiscal analysts most.",
   "contextSource": "The Hamilton Project",

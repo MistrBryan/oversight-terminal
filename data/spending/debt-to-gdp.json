@@ -30,7 +30,7 @@
   ],
   "dataSource": "FRED (GFDEGDQ188S)",
   "dataSourceUrl": "https://fred.stlouisfed.org/series/GFDEGDQ188S",
-  "fetchedAt": "2026-07-18",
+  "fetchedAt": "2026-07-20",
   "context": "The national debt measured against the size of the whole economy. Economists watch this ratio more than the raw dollar figure, because it shows whether debt is growing faster than the country's ability to carry it.",
   "why": "A debt load near or above 100% of GDP is historically high for the U.S. outside wartime. The ratio, not the raw number, is what credit-rating agencies and economists judge sustainability by.",
   "contextSource": "Penn Wharton Budget Model",
