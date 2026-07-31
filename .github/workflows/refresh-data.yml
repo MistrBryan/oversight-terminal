@@ -41,13 +41,16 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: node tools/fetch-spending.mjs
 
+      - name: Prune news older than 7 days
+        run: node tools/prune-news.mjs
+
       - name: Commit refreshed data
         run: |
           git config user.name  "oversight-bot"
           git config user.email "actions@users.noreply.github.com"
-          if [ -n "$(git status --porcelain data/spending)" ]; then
-            git add data/spending
-            git commit -m "data: weekly spending refresh ($(date -u +%Y-%m-%d))"
+          if [ -n "$(git status --porcelain data/spending data/news.json)" ]; then
+            git add data/spending data/news.json
+            git commit -m "data: refresh spending + prune stale news ($(date -u +%Y-%m-%d))"
             git push
           else
             echo "No data changes."

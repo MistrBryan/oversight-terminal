@@ -20,7 +20,9 @@
       return topicOk && srcOk;
     });
     if (!filtered.length) {
-      host.innerHTML = "<div class='empty'>// NO ITEMS MATCH FILTER</div>";
+      var msg = items.length ? "// NO ITEMS MATCH FILTER"
+        : "// NO HEADLINES IN THE LAST 7 DAYS — CHECK BACK SOON";
+      host.innerHTML = "<div class='empty'>" + msg + "</div>";
       return;
     }
     host.innerHTML = filtered.map(function (it) {
@@ -83,11 +85,19 @@
     var host = document.getElementById("news-list");
     try {
       items = await (await fetch("data/news.json", { cache: "no-store" })).json();
+      // hide items older than the freshness window (default 7 days), so stale
+      // headlines drop off the site immediately — even before CI prunes the file
+      var MAX_AGE_DAYS = 7;
+      var cutoff = Date.now() - MAX_AGE_DAYS * 86400000;
+      items = items.filter(function (it) {
+        var t = Date.parse(it.publishedAt);
+        return isNaN(t) ? true : t >= cutoff;
+      });
       items.sort(function (a, b) { return (b.publishedAt || "").localeCompare(a.publishedAt || ""); });
       buildFilters();
       render();
       var c = document.getElementById("news-count");
-      if (c) c.textContent = items.length + " APPROVED ITEMS";
+      if (c) c.textContent = items.length + " ITEMS · LAST 7 DAYS";
     } catch (e) {
       host.innerHTML = "<div class='empty'>// NEWS FEED UNAVAILABLE</div>";
       console.error(e);
