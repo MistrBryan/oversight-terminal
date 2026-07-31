@@ -2,7 +2,7 @@
 /* prune-news.mjs — drop approved news items older than N days (by publishedAt)
    from data/news.json, so stale headlines fall off the site and the file.
 
-   Age window: NEWS_MAX_AGE_DAYS env, default 7.
+   Age window: NEWS_MAX_AGE_DAYS env, default 30 (matches the longest news view).
    Run locally:  node tools/prune-news.mjs
    In CI:        refresh-data.yml (committed + deployed automatically). */
 
@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const NEWS = join(dirname(fileURLToPath(import.meta.url)), "..", "data", "news.json");
-const MAX_AGE_DAYS = Number(process.env.NEWS_MAX_AGE_DAYS) || 7;
+const MAX_AGE_DAYS = Number(process.env.NEWS_MAX_AGE_DAYS) || 30;
 
 const cutoff = Date.now() - MAX_AGE_DAYS * 86400000;
 
