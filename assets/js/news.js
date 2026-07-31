@@ -94,6 +94,21 @@
 
   function buildRange() {
     var host = document.getElementById("range-filters");
+    // Self-heal: if a stale cached news.html lacks the range row, build it so
+    // the chips always appear regardless of which HTML version is cached.
+    if (!host) {
+      var topic = document.getElementById("topic-filters");
+      var anchor = topic && topic.closest(".filters");
+      if (anchor) {
+        var row = document.createElement("div");
+        row.className = "filters";
+        row.setAttribute("role", "group");
+        row.setAttribute("aria-label", "Filter by time range");
+        row.innerHTML = "<span class='ctx' style='align-self:center;color:var(--text-dim);font-size:12px;margin-right:6px'>RANGE:</span><span id='range-filters' style='display:contents'></span>";
+        anchor.parentNode.insertBefore(row, anchor);
+        host = document.getElementById("range-filters");
+      }
+    }
     if (!host) return;
     host.innerHTML = RANGES.map(function (r) {
       return "<button class='chip " + (state.range === r[0] ? "active" : "") +
