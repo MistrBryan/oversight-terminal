@@ -45,11 +45,14 @@ const TOPIC_KEYWORDS = {
     "crackdown", "martial", "national guard", "emergency powers"],
 };
 
+// word-boundary match so "funding" doesn't hit "refunding", etc.
+function hasWord(text, word) {
+  return new RegExp("\\b" + word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i").test(text);
+}
 function classify(text) {
-  const t = text.toLowerCase();
   const topics = [];
   for (const [topic, words] of Object.entries(TOPIC_KEYWORDS)) {
-    if (words.some((w) => t.includes(w))) topics.push(topic);
+    if (words.some((w) => hasWord(text, w))) topics.push(topic);
   }
   return topics;
 }
@@ -125,7 +128,9 @@ async function main() {
       let kept = 0;
       for (const it of items) {
         if (!it.title || !it.url) continue;
-        const topics = classify(it.title + " " + it.summary);
+        // classify on the HEADLINE only — summaries are a noise firehose that
+        // tag unrelated stories. A real spending/overreach story says so in its title.
+        const topics = classify(it.title);
         if (!topics.length) continue;                       // off-topic
         if (seenUrls.has(it.url) || localSeen.has(it.url)) continue;
         const nt = normTitle(it.title);
@@ -162,11 +167,14 @@ async function main() {
   // request diff shows them as proposed additions. The reviewer deletes any
   // unwanted rows and MERGES to approve — merging is the approval step.
   if (process.env.APPEND_TO_NEWS === "1" && candidates.length) {
+    // cap what lands in the PR so the reviewer sees a short, high-signal list
+    // instead of dozens of rows to delete. Newest first.
+    const CAP = Number(process.env.NEWS_CANDIDATE_CAP) || 12;
     const today = new Date().toISOString().slice(0, 10);
-    const staged = candidates.map((c) => ({ ...c, approvedAt: today }));
+    const staged = candidates.slice(0, CAP).map((c) => ({ ...c, approvedAt: today }));
     const merged = staged.concat(approved); // newest first
     await writeFile(join(DATA, "news.json"), JSON.stringify(merged, null, 2) + "\n");
-    console.log(`> staged ${candidates.length} item(s) into data/news.json for PR review`);
+    console.log(`> staged ${staged.length} of ${candidates.length} candidate(s) into data/news.json for PR review`);
   }
 }
 
