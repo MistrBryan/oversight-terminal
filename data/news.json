@@ -1,5 +1,145 @@
 [
   {
+    "id": "n1qr5rxv",
+    "title": "Senate passes stopgap to avert pre-election shutdown",
+    "summary": "The Senate passed a stopgap spending bill early Saturday that would keep the government funded through Dec. 11, moving Washington closer to avoiding another shutdown before the November midterms. Why it matters: The bipartisan 90-6 vote would push the next…",
+    "url": "https://www.axios.com/2026/08/08/senate-government-funding-shutdown-stopgap",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-08-08",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "n1m4vlx1",
+    "title": "Senate approves funding bill to avoid a shutdown before the election",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQczJKQlNxb05hS05Zc0hoUC1HTjJ2ZlpoWHRRVzlXTDNyTDFWQ3BKVnZhM1hmb1FZb0NiVkp3aDF6ZW5qWW9CU2Fyd1BiTTFmVTEzNmdpbkxRd0pOLVNqRTZyOWJVVVdLSWRrdW1uSDA3bWoxV0RyUlhQUzc1ZHlDUUctbFpQbnJWV3NpZGY2b3d6bzdJ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-08-08",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "n2k8yft",
+    "title": "Medicaid's work requirement crunch arrives",
+    "summary": "Massive changes to Medicaid eligibility are entering a new phase as states begin implementing new work rules and patients face the first real risk of losing coverage. The big picture: The crunch period has started for states to get the…",
+    "url": "https://www.axios.com/2026/08/03/medicaid-work-eligibility-requirement-rules-patients",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-08-03",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "n11kte9q",
+    "title": "Senate leaders reach funding deal to avoid shutdown during campaign season",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSEtNZW9oWnRaVXZNYmhxaFNrSERYaDdIaVBCdEsxalJBd1V0d3l5MWl2a2k4azI4Y1cyNHAzeHdBNEdiZmdRREc1b2x5b2ZQb0N0R1lNQ05fRWpCaHlTUWU3RGRQLTc3SXJ5SUN3Z2J6MnJYZFRUVjhfMHJnckc2VktnN2lTaGN1SGNuYk9HaENlcmJTRkF0ekp1MTA3b0tO?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-08-02",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "n1kqe2wu",
+    "title": "Thousands of migrant children in the US could face new deportation risks as legal aid deal expires",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcWtyd2JObUlkbGdWeEV1M3BfYmJOZVU4M3RhRTgyUUtFZlRtQ2lpbkhmOWFvMUowUFJZZWZ1VHVsYkhFNTZybGs2ZG83QkdiN0x1dzFta01jZ3NXcV9XTXZwR2R6RWNGRzk0UUYzc3lxamdJaGZJZ3R3VVZCWUpqWnJmZUNwVWctVlBDR2ZlRlloeTlDV1dRd1VlZHhSQQ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-07-31",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "nrvfo4m",
+    "title": "Breakneck pace in immigration courts is driving up deportation orders",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbjhCR3dBbTcxdjZORDhaRVZoWklneU10UFYxVjc4eUFTR1ZFaDlaMWdWVWRRV243MnJoRXJjRXotRkRQUDRtNGRDU0tpM2lxZndFczlqcjhxQ1VWcGtXeEpudjRfSFVieDB1WGlNcVNGTlVUNmk0dUZrLWh5RjhFOTNoaW9Ubmg5TzgwT2xVWEZKUE11bldaYWZubkN6Q3BlOWFGZ1RR?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-07-31",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "n1i2v1f6",
+    "title": "National Guard officer forged records and stole public money to facilitate secret second marriage",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaHluVDQwOXhVSXpqRWY3YXFhbVNZalQwMGhCNm44OGdlSlpyVVZRdEFNS19jVlFub2ZncHlLX3pzblZjV3hoNzJqVDg1RFM3ZjVlYlhWeVRWZXpCT3lXazJTZGRIdWoya2xYVXZtRTdfcmh3Tmt3ZmlXSmRpNmVaUUREUlhacFNBNGFsTGlXRVFkTklL?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-07-30",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "n1l22zwo",
+    "title": "ICE extends no-bid contract for major detention center in Texas, rejecting calls for closure",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMjY0ZTlzRU1hZ0pEYy1VSGNWMGZzQjdtLVlMcEZ4dUpURXptSFQ1TjllUHpaNGNxWkNlMXRhTGZHT2ZoQTg1RVktTnNOcS1TMnNRN3Z1WmZkR1JSYnYtWFhCSGp4M21BZUt6OUIzWXE4elBCVjFZYXhsY052NlRtMWJUQ2wya05MUWdXZlBjQU1EUXdlWklNNzdMZ0JlVDFvUVhvZEF2Zm9ZVTVm?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-07-27",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "n1ln7l3q",
+    "title": "The Pennsylvania budget quietly relaxed a standard for lead reporting in schools",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPX01oMEVqbG1Wb3ZlV2ZCX0dOSGtHa3FiT0FZSGo2RXJtcF9zdkItOXk3eldUbVBKUUhzZUtuNkVhaDNmdDhnemxRdHRTVi1lblBvLXpjY0FnS3B0dzR3Y2FCUG9aMVF3XzJuZGpFc0NxTFRkZXMxYWN2OVBuZW4xREJtcUk3bXhKS2xHanlFZmM3ZWkzMFdzN1hpbkEyYm1sUG14MmVkbURMYWd5UlBxWg?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-07-23",
+    "approvedAt": "2026-08-08"
+  },
+  {
+    "id": "n17d0a5p",
+    "title": "More than 24 states sue Trump administration after it put conditions on receiving disaster funding",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaFh4VkxnS24wT1ZXUEIzWGc0RWtVeklfQnBoUnNnSl9SV3FHT3BHc25XbFNMZzVZNXpiRXYtTUpQM2VNeW5sa0NodEJpNC1zWnJ2bVdvcnNZbTdfcDFwekNxbjBwaXNBcWlJT0Q5cWFiYkZIaGxaY1YzbkxxRjhMVnlXaTJ4QUlMYThwZkdQSC1admYzYnN5U1RlbmxOdw?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-07-23",
+    "approvedAt": "2026-08-08"
+  },
+  {
     "id": "n1cun137",
     "title": "Western allies warn North Korean IT workers funding nuclear arsenal",
     "summary": "Pyongyang accused of using hard currency earned by AI-assisted workers to power armaments programme.",
