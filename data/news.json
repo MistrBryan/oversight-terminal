@@ -1,5 +1,173 @@
 [
   {
+    "id": "nf4r24a",
+    "title": "Minneapolis mayor wants to cut funding for violence interrupters. But at what cost?",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRTJKTkllZHBLckhyV25pa3F5RDZSZEJmN3BDR1pLelgxTGh6eGFIRkZpNTRKLTJwZVptUnQydDdIVHVwTTNfdVdobzNNSTBaZ0JSNGdTNGF0WnJnaDgxZ3hZdlBEZTlPVmctWjV1M2RONzdya1lJWk9LSFdJU1BTMlJRTEZNc3VUNmQ1X3IwR1h6ZFdHMzMzMWdqVEwwamZycXM4RG1wOVI5TlE?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-09-04",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "n1yqph34",
+    "title": "Flock surveillance cameras become midterm campaign target as voters balk at tech companies' power",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNjlKalZBeEdFN1pPZ2R1UC1fTnFpU2h1TXJSd1ZMbmplT3ROa1pyZXFqOWRDTmIzTldQejRhaEZNdklFZEFtUDZwUVBZNDhJUUtTM3ZEOEQwX0JXUkI2eDBKME52dHVtenJlTjNwdzR1dHpYODdVOElIa19IUWNmVndxZDltRE9wYVUwcGgyUmhoODV0bm9mSHRwcnlhYzl0Qk5scGNSelUxQ1FfcXBKMTBrQQ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-09-04",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "nf6sa2k",
+    "title": "Witkoff meets powerful UAE official amid crackdown on Iran",
+    "summary": "White House Envoy Steve Witkoff met last weekend with the national security adviser of the United Arab Emirates to discuss next steps on Iran, according to two sources with knowledge of the meeting. Why it matters: The talks, which weren't…",
+    "url": "https://www.axios.com/2026/09/02/witkoff-uae-iran-war-trump-bessent",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-09-02",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "n1ek3pxv",
+    "title": "The $1 Trump coins are here. Why spending them is legal but tricky",
+    "summary": "The U.S. Mint began selling $1 Trump coins Wednesday. Why it matters: The Trump coin sits in a rare middle ground: The Mint is promoting it as a collectible, but under federal law, it has a face value of $1…",
+    "url": "https://www.axios.com/2026/09/02/trump-coins-real-money-legal-tender-spend-value",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-09-02",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "n1tchs55",
+    "title": "Postal Service work to comply with Trump's executive order is rushed and sloppy, a whistleblower contends",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQkd4Zk5iSDQ5MEUwOWtZRm9aNlNmSTI5OUE1QnhxSmZvNE41MnJPUUtTWVcwbXVRbDZoSF9FaS1DTUJPbG8zZ1MxOFRuVlR3Z3dSWVFzZTVuWjk5dFRrNUJfVkdicUk1RUMyM29WSTVmSTNpZWlyZFNQWVVBOGJ0cHlVeE5YTDBlLUNwdk40OXQwVGtoV3FyWE93Q0gzbXZjWkJPb21LTQ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-09-02",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "n14yt58",
+    "title": "Data center construction spending surged in July",
+    "summary": "Data: U.S. Census Bureau, FactSet Construction spending on AI data center \"shells\" soared in July, rising at an annualized rate of nearly 60% from July 2025 levels. Why it matters: It shows the AI building frenzy was gathering strength this…",
+    "url": "https://www.axios.com/2026/09/01/ai-data-center-constructon-spending",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-09-01",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "n1w9sb9e",
+    "title": "House lawmakers return to Washington with a stopgap funding bill atop the list of priorities",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOcE1UOEJ6VGpFVjZFT1UyM0lMbjEzVHBaLTBBSVRoR3BDMTliOHYwODQzb19URWpVRWFHdkdNeEJSSUtyVk11eDNackhtTHduMFNDdzF2UkM2Vjc4R2Npdm1BQUFramtCMUxKZ2d3UTg4ZDBHLVhyN1dHczd5MW1hUkgzY1JOTzJvbngxLW1FWlUtRGE0ejNtczg5SkpSMC1SUU1xYk1Sc0VZNzk3NlF5VTg4YXlDUQ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-09-01",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "namqq90",
+    "title": "Japan to beef up its defense with drones, AI and missiles, defense budget plans show",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUm5rMVNka0xwb3dBWjAtMG5jcHhHTXRiLVFMcWx2amRhZmY0ZDJmUGlrUllpdXRKSElib0FsdEViaTk2VmdsQ0pwTmhoSVZKSm4zYm5HMWpZZFVkV2VNdmQ0cWhGRWM1dmpDMklfNzlvX2p2RkRUM09iZG01TVJpUF9LTEtwZkh2cUt6a2JBcDdnNUx2?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-08-31",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "ns0zt8i",
+    "title": "US Treasury blocks certain journalists from G20 meeting in North Carolina",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYjVPYXBuYXdIZUtXVkN4VzRJVlA3aU83Sjlrc3hpQXhvT1VtQ3p1Q3gzdWhETEJVUFgxNkJBeXB4c3ZpY2thanU3MkFmRHJqNEVxYjdfTzd1VVF4QjFLY3U0dHhmeTRwS19Ua1VEMDlOQkRCZDBKaG1tSVZHVkw2SHRLRjBwYmM5ZVpGWWxVTEVDM0c2SjlR?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-08-30",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "n1rme8zp",
+    "title": "Autopsy shows Tennessee National Guard fatally shot 20-year-old armed man in the back",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNN3VWMTVPWkljWTd0Z3I5WkhONWxSMTZ3b1NzY2lUaDA0TjI5WV9XTGdTbVNoS2ExOTBtREcxUWRySElweFowcDFFTnRoa2tESGl0MzNoV2R0dTRfazZ0TElhRmhIbURvTmMwclRYVG9nd0gyRzVuWnJOM0I0VEJVRXBIaVc5eDE1WEkyU0Y5Z1ZCekh2LVR4ek5Wa00?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-08-28",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "n1vqd65c",
+    "title": "1000s of affordable housing subsidies will end in the next 5 years. A new database will help Pa.",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOE5xME1pYVdDM3laLUVJU2w2SE94QjJrNTJlTTdxNE0xSGJEZll6VmdlVzk4UkdqSUZXZE90VnpOWjhVRklyOVBEdk05ajNJZktrbTNNekxEVjNZSkhob0MzYzdYUzloaWs5V18zM2JUQnRObjRNUlAxMXUxMWxwNjNfdkw3UGE1dnNkZmRZeGZabWVwWF91Q002ZGxuMGcxR1B1LWtWMmUyWVh5RkdoYg?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-08-26",
+    "approvedAt": "2026-09-05"
+  },
+  {
+    "id": "n47vkc4",
+    "title": "How to avoid a Social Security cut? Lawmakers are floating ideas for what to do",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPc2xhTVV1YW9QVTJ2dEpXSUpOdndCN1Nad0xaSkF5Yk9jSFhFa25DQnQwRGw2Qk1uUDNXVWVjM3d1N0RvT0ptV2RNbWdWeTlTdGE5em9PbWNicGwwdmJWeG05Tk9fZmRjc1U1R1FHTVBQeXcyaDNrVTZOZ0RWdS1NZlNCaEJ4X212V0pOb2RRc01FNzNqcXZvY0NoZTFpOWZiZlpQZnVndjFaQQ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-08-26",
+    "approvedAt": "2026-09-05"
+  },
+  {
     "id": "n5o6rmp",
     "title": "Washington grapples with a National Guard deployment extended until 2029",
     "summary": "",
