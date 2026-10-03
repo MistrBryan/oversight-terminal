@@ -1,1 +1,170 @@
-[]
+[
+  {
+    "id": "n1fzkbjl",
+    "title": "Trump promises $100 checks for 20 million seniors for Medicare",
+    "summary": "President Trump late Friday night said the administration would send just under $100 to more than 20 million senior citizens to help pay for Medicare benefits. Why it matters: A month before the midterm, the president is adding another roughly…",
+    "url": "https://www.axios.com/2026/10/03/trump-medicare-100-seniors-improvement-fund",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-10-03",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "nf7vg99",
+    "title": "Protesters clash with police over Chilean government’s planned education budget cuts",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOaGtIcW51R08zYWJZVXBwN2x2S1EzaG1jc3Q5SzZXTDRRRHhZVWtJR0RiYmQ0cG5qY0Z6aFpRQzVtX1kxdXBaN1JMaG1JN1BRUUlOSGtEaDBmOW1rckxfLVJidnlkNGZ6Umk4X1ExT0xxSnlzT21yLXhhZ1FDaFlNVlAyNVRJS3BrdkQwajl4ZVRiaXJlNWpOc0t0b0l4TDd6OVpYbWJjQjgxaDA1RVBzbVRya3V4QmpuNWoycW9MeVRXVHpoMlJWeFpOaFd2N0htU1dwd3YyVkc?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-10-02",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "n1l2a408",
+    "title": "Israel kills another Palestinian journalist; Bolivian attorney general detained; Entire newsroom arrested in Egypt",
+    "summary": "Drop Site Daily: October 1, 2026",
+    "url": "https://www.dropsitenews.com/p/israel-gaza-journalist-bolivia-attorney-general-egypt-arrest-newsroom",
+    "source": "Drop Site News",
+    "lean": "left",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-10-01",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "nh4v6z",
+    "title": "France’s public debt hits records as economy takes center stage in French election",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ2V6LUNJME1yUGRjWEUtdjZiRlk3N0E2eXdGdjZvT1dZbS1YNmp4ZWVVYmF0RDBOS2QxdnVpNzVjZThWVGlDaXowdVpsd1JHeDVPXzRHR2FJWENuOXFpcXlGV3V2T0x6TGhCejhfanlvck93dUl6eVFFcVBZMHZvZ1hwNnlPenpla2E5TVBXY1Fsa2dfSDZsQzdWRnhKTzdKQWlnaVZWUDB6R095?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-10-01",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "nqxpk2",
+    "title": "Supreme Court grants review of Trump administration's mandatory detention policy for immigrants",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTXJrLVFVc043T05WSTl5OWgxWVV4ZmlwVUVSUzE1UmNYSFpKSF9TTlppNWx2YTMxaTF5eG82ZmZDaURXRjlXMjBnZXVWdi1nS0JmQkwxc1k4TXEwNmZuUzJCZ1p4MkVaaWU1SmxjZXZpX2c1dTl1ZmczdG1iVVk1VU5YSmFNR3V5TEhyQUs3UW5RN3VZQ21sVW1UVEwxZktw?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-10-01",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "n36zdem",
+    "title": "Former Myanmar American Chamber of Commerce board member detained in Spain",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQVmVudkR6M1BGRkJ0cWtpb2VDaFlPVUpvb3A3aW90S3NKNUdrS01pMjRCakx0XzR3U3RSVHlUTnd1WFFhd2NFcTJ6RkFXaTBwQUNQemhIS3NxTEVVSXRWbFJRaWZHOGRoSV9rVVVuaUhSVDBUZUdjTmllRktSMnNDUDJfb1d3UUdrRm8tWW5iSHVtUGha?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-10-01",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "n14fbmv2",
+    "title": "Scoop: Trump's hand-picked, taxpayer-funded ads about to ramp up",
+    "summary": "President Trump is personally selecting which government-funded ads his administration is airing ahead of the midterms — with more to come, Axios has learned. \"This is just the beginning,\" an administration official told Axios. Why it matters: The seemingly partisan…",
+    "url": "https://www.axios.com/2026/09/29/trump-ads-taxpayer-funds",
+    "source": "Axios",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-09-29",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "nh69znf",
+    "title": "Watchdog says Trump can’t cancel more than $800M in spending approved by Congress",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNRXZSek1ZOHUxX2hiOURDY1pkR09LNWktQ0NUbFhRWGtBamo1d1FjVGthM2tfaXl0UUc0NlBjMEVLSExpa3ZNSThEeHE1ZGhJWEZ1dG9KemNvTldoa19rTGtHV2lheGVuWUJLeXFoWmtEUEwwM1E1c0hvVURGYU1BSVJfdERIdnZ2T1JSUERITTI4SXYzTHAwZ0lQMA?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-09-29",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "n1jy8yzn",
+    "title": "Homeland Security taps $20M in taxpayer funds for pro-Trump ads",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWW9HbDVBYV9QNnNzcjZRMEdQNms3aE84ZWJsVTFZVVVFaWJ3UWdhc1p2Vi1TczlFZzVpaU9YUWMwdlJ5VnhnSGVJYmtrYWV0UVhPekt4WGx1RUpXQS1hMDNPQWpTb3Fsa3hfd3dhQ21rWFhoN2FJcl80MWRCRWpMSFlSZGlxTWpuTDBoODFKNEhkT2JfRG5qZ09UdndzcFVMc2xWeQ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-09-29",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "nu6s43w",
+    "title": "Czech government faces no-confidence vote over budget deficit and PM’s conflict of interest",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOS2ZXUHR2c1YzRXBxRFBTNUFCcFVmVVNqbG1rNnJrTjgxaEV5Qk50QWFETEZ5b0R5MkJvdnJ3aXZnSkxQcDQzQ2tUbnN6TjBrcDJMem9PTDdkZXZnLUVGeFZKMmRMSFV6WjBUTHBFN0h2bk1MTHllcURPLWE2X3JWQzQtczh6Y3VwNkY1Qnp5NXFzdENaT1pKdW5XUnQ3SEQ4aWc?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "spending"
+    ],
+    "publishedAt": "2026-09-29",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "n1wg3llz",
+    "title": "Appeals court weighs fate of judge's contempt probe over Trump administration deportation flights",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZE1VVEF6T3pIbGM0LUJNUXdlWlR0U3QydDRGb3NuZVFYby10cVVXSlRxU3poNTNfY2stX01PSE95clhrQ1Y2ZnAwUThrZm13WEprRmhoc2FHSUx5d1g4WlQxRmlYUnRzWS02SFJsaHYwX1RRc0ZlaloxVS1JRUtrQTNNS3BQVlgtRDZfVmxBMlM4TGpMeHFjSFI1VFRSUQ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-09-29",
+    "approvedAt": "2026-10-03"
+  },
+  {
+    "id": "n1osgf4a",
+    "title": "Judges’ Crackdown On Virtual Hearings in Honolulu Adds Hurdles For Immigrants In Court",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdE8xQmNXSGkxcTJNUW1UcGZpYzBSREViYWFYWF9RdkFkSklKWFpJZmxNbi1fU1lUOGVVVmYwMWw0TVZOaWwzTDY4emJBUVNzQnFydjRkR19EdVhDZlBLMXZTYWN4YTBsLVJBN3lxVjdnWFVWVnMwa0tCcmJDcnhJT2dlbTVuYTJqSzRjXzNQTnlGUHVQN1kwOGlVUjVHZVktUEh1NWJJTzJheFl0aF8xMXdnTFU2UQ?oc=5",
+    "source": "AP News",
+    "lean": "center",
+    "type": "news",
+    "topic": [
+      "overreach"
+    ],
+    "publishedAt": "2026-09-29",
+    "approvedAt": "2026-10-03"
+  }
+]
