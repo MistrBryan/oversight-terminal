@@ -1,86 +1,86 @@
 {
   "id": "spending-by-function",
-  "title": "Spending by Category (FY25)",
+  "title": "Spending by Category (FY26)",
   "unit": "USD_billions",
   "kind": "breakdown",
   "breakdown": [
     {
       "name": "Medicare",
-      "value": 1837
+      "value": 2143
     },
     {
       "name": "Social Security",
-      "value": 1668
+      "value": 1747
     },
     {
       "name": "National Defense",
-      "value": 1416
+      "value": 1612
     },
     {
       "name": "Net Interest",
-      "value": 1251
+      "value": 1382
     },
     {
       "name": "Health",
-      "value": 1145
+      "value": 1227
     },
     {
       "name": "Income Security",
-      "value": 759
+      "value": 745
     },
     {
       "name": "General Government",
-      "value": 511
+      "value": 555
     },
     {
       "name": "Veterans Benefits and Services",
-      "value": 413
-    },
-    {
-      "name": "Education, Training, Employment, and Social Services",
-      "value": 222
-    },
-    {
-      "name": "Transportation",
-      "value": 198
-    },
-    {
-      "name": "Natural Resources and Environment",
-      "value": 133
+      "value": 453
     },
     {
       "name": "Administration of Justice",
-      "value": 115
+      "value": 365
+    },
+    {
+      "name": "Transportation",
+      "value": 219
+    },
+    {
+      "name": "Education, Training, Employment, and Social Services",
+      "value": 194
+    },
+    {
+      "name": "Natural Resources and Environment",
+      "value": 126
     },
     {
       "name": "Community and Regional Development",
-      "value": 106
-    },
-    {
-      "name": "Commerce and Housing Credit",
-      "value": 96
+      "value": 77
     },
     {
       "name": "Agriculture",
-      "value": 73
+      "value": 71
     },
     {
       "name": "International Affairs",
-      "value": 72
+      "value": 68
     },
     {
-      "name": "Energy",
-      "value": 63
+      "name": "Commerce and Housing Credit",
+      "value": 56
     },
     {
       "name": "General Science, Space, and Technology",
-      "value": 48
+      "value": 44
+    },
+    {
+      "name": "Energy",
+      "value": 37
     }
   ],
-  "total": 10334,
+  "total": 11314,
   "dataSource": "USAspending.gov",
   "dataSourceUrl": "https://www.usaspending.gov/explorer/budget_function",
-  "fetchedAt": "2026-11-16",
+  "fetchedAt": "2026-11-23",
   "context": "How federal spending splits across major purposes — Social Security, Medicare, defense, interest, and so on — for the most recent completed fiscal year, per USAspending.gov.",
   "why": "The category mix shows where the money actually goes. Note USAspending uses a broader, account-level basis than the Treasury outlays figure, so its total is larger and the two won't reconcile exactly — read this for the relative shares, not the grand total.",
   "contextSource": "Brookings Institution",
